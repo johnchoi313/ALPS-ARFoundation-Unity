@@ -180,7 +180,8 @@ MonoBehaviour:
     imagePrefab: {fileID: 3279860958548870494, guid: 2584331523bd14e8898965d93034efdb,
       type: 3}
   - imageGuid: 9d45a1e4-0c4a-44a8-8233-a7596924f465
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 1412038606093664625, guid: bbb58d55bfa8ead4ea22e0853689bbe5,
+      type: 3}
   m_ImageLibrary: {fileID: 11400000, guid: c86e375d7e7430442a1104e88fa21f21, type: 2}
 --- !u!114 &264295717
 MonoBehaviour:

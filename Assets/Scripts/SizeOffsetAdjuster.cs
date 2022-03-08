@@ -16,6 +16,10 @@ public class SizeOffsetAdjuster : MonoBehaviour {
     public Slider offsetYSlider;
     public Slider offsetZSlider;
 
+    [Header("Material")]
+    public Material standardMaterial;
+    public Material occluderMaterial;
+
     public void setOffsetY(float value) { offsetY = value;
         PlayerPrefs.SetFloat("offsetY", offsetY);
     }
@@ -24,6 +28,19 @@ public class SizeOffsetAdjuster : MonoBehaviour {
     }
     public void setScale(float value) { scale = value;
         PlayerPrefs.SetFloat("scale", scale);        
+    }
+
+    public void setStandardMaterial() {
+        GameObject[] occluders = GameObject.FindGameObjectsWithTag("Occluder");
+        foreach(GameObject occluder in occluders) {
+            occluder.GetComponent<Renderer>().material = standardMaterial;
+        }
+    }
+    public void setOccluderMaterial() {
+        GameObject[] occluders = GameObject.FindGameObjectsWithTag("Occluder");
+        foreach(GameObject occluder in occluders) {
+            occluder.GetComponent<Renderer>().material = occluderMaterial;
+        }
     }
 
     // Start is called before the first frame update

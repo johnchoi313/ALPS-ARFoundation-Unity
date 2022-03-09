@@ -10,6 +10,7 @@ public class SizeOffsetAdjuster : MonoBehaviour {
     public float offsetY = 0f;
     public float offsetZ = 0f;
     public float scale = 1f;
+    public int angle = 0;
 
     [Header("Sliders")]
     public Slider scaleSlider;
@@ -28,6 +29,9 @@ public class SizeOffsetAdjuster : MonoBehaviour {
     }
     public void setScale(float value) { scale = value;
         PlayerPrefs.SetFloat("scale", scale);        
+    }
+    public void rotate90() { angle++; angle = angle % 4;
+        PlayerPrefs.SetInt("angle", angle);        
     }
 
     public void setStandardMaterial() {
@@ -48,6 +52,11 @@ public class SizeOffsetAdjuster : MonoBehaviour {
         offsetYSlider.value = PlayerPrefs.GetFloat("offsetY", offsetY);
         offsetZSlider.value = PlayerPrefs.GetFloat("offsetZ", offsetZ);
         scaleSlider.value = PlayerPrefs.GetFloat("scale", scale);        
+     
+        offsetY = PlayerPrefs.GetFloat("offsetY", offsetY);
+        offsetZ = PlayerPrefs.GetFloat("offsetY", offsetZ);
+        scale = PlayerPrefs.GetFloat("scale", scale);    
+        angle = PlayerPrefs.GetInt("angle", angle);    
     }
 
     // Update is called once per frame
@@ -57,6 +66,7 @@ public class SizeOffsetAdjuster : MonoBehaviour {
         foreach(GameObject offsetObject in offsetObjects) {
             offsetObject.transform.localPosition = new Vector3(0,offsetY,offsetZ);
             offsetObject.transform.localScale = new Vector3(scale,scale,scale);
+            offsetObject.transform.localEulerAngles = new Vector3(angle * 90f, 0, 0);
         }
 
     }

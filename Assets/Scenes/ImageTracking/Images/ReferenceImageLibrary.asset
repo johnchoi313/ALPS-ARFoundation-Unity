@@ -65,3 +65,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: aw_logo
     m_Texture: {fileID: 2800000, guid: ea62864728b33ee4f968106aad513325, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5312430137590366693
+      m_GuidHigh: 7592004838591923084
+    m_SerializedTextureGuid:
+      m_GuidLow: 12431237702453958437
+      m_GuidHigh: 11461622184396217259
+    m_Size: {x: 0.2, y: 0.2}
+    m_SpecifySize: 1
+    m_Name: square_color_marker
+    m_Texture: {fileID: 2800000, guid: ad361725a0d3ac84ab5bac82a6dc0f9f, type: 3}

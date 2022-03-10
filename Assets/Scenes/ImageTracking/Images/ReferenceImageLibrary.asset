@@ -69,6 +69,16 @@ MonoBehaviour:
       m_GuidLow: 5312430137590366693
       m_GuidHigh: 7592004838591923084
     m_SerializedTextureGuid:
+      m_GuidLow: 1559543061289557495
+      m_GuidHigh: 3064322182403975704
+    m_Size: {x: 0.2, y: 0.2}
+    m_SpecifySize: 1
+    m_Name: square_color_marker_invert
+    m_Texture: {fileID: 2800000, guid: c416ddf79c2615a418ea8917caa8862a, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5173611201389758664
+      m_GuidHigh: 12491171392446220954
+    m_SerializedTextureGuid:
       m_GuidLow: 12431237702453958437
       m_GuidHigh: 11461622184396217259
     m_Size: {x: 0.2, y: 0.2}

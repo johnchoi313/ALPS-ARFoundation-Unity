@@ -55,3 +55,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: arrows
     m_Texture: {fileID: 2800000, guid: a6fd8503774c0402aa403884f5b77f39, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5304981914291456664
+      m_GuidHigh: 7118415592844674485
+    m_SerializedTextureGuid:
+      m_GuidLow: 4531791878238144071
+      m_GuidHigh: 2680576008466229497
+    m_Size: {x: 0.14, y: 0.13447534}
+    m_SpecifySize: 1
+    m_Name: aw_logo
+    m_Texture: {fileID: 2800000, guid: ea62864728b33ee4f968106aad513325, type: 3}

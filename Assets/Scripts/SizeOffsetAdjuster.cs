@@ -70,21 +70,21 @@ public class SizeOffsetAdjuster : MonoBehaviour {
     public void setStandardMaterial() {
         GameObject[] occluders = GameObject.FindGameObjectsWithTag("Occluder");
         foreach(GameObject occluder in occluders) {
-            occluder.SetActive(true);
+            occluder.GetComponent<Renderer>().enabled = true;
             occluder.GetComponent<Renderer>().material = standardMaterial;
         }
     }
     public void setOccluderMaterial() {
         GameObject[] occluders = GameObject.FindGameObjectsWithTag("Occluder");
         foreach(GameObject occluder in occluders) {
-            occluder.SetActive(true);
+            occluder.GetComponent<Renderer>().enabled = true;
             occluder.GetComponent<Renderer>().material = occluderMaterial;
         }
     }
     public void setHidden() {
         GameObject[] occluders = GameObject.FindGameObjectsWithTag("Occluder");
         foreach(GameObject occluder in occluders) {
-            occluder.SetActive(!occluder.activeSelf);
+            occluder.GetComponent<Renderer>().enabled = !occluder.GetComponent<Renderer>().enabled;
         }
     }
     

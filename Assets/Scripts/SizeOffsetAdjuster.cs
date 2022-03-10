@@ -14,11 +14,18 @@ public class SizeOffsetAdjuster : MonoBehaviour {
     public float scale = 1f;
     public int angle = 0;
 
+    public float angleX = 0f;
+    public float angleY = 0f;
+    public float angleZ = 0f;
+
     [Header("Sliders")]
     public Slider scaleSlider;
     public Slider offsetXSlider;
     public Slider offsetYSlider;
     public Slider offsetZSlider;
+    public Slider angleXSlider;
+    public Slider angleYSlider;
+    public Slider angleZSlider;
 
     [Header("Material")]
     public Material standardMaterial;
@@ -49,32 +56,60 @@ public class SizeOffsetAdjuster : MonoBehaviour {
         PlayerPrefs.SetInt("angle", angle);        
     }
 
+    public void rotateX(float value) { angleX = value;
+        PlayerPrefs.SetFloat("angleX", angleX);        
+    }
+    public void rotateY(float value) { angleY = value;
+        PlayerPrefs.SetFloat("angleY", angleY);        
+    }
+    public void rotateZ(float value) { angleZ = value;
+        PlayerPrefs.SetFloat("angleZ", angleZ);        
+    }
+    
+
     public void setStandardMaterial() {
         GameObject[] occluders = GameObject.FindGameObjectsWithTag("Occluder");
         foreach(GameObject occluder in occluders) {
+            occluder.SetActive(true);
             occluder.GetComponent<Renderer>().material = standardMaterial;
         }
     }
     public void setOccluderMaterial() {
         GameObject[] occluders = GameObject.FindGameObjectsWithTag("Occluder");
         foreach(GameObject occluder in occluders) {
+            occluder.SetActive(true);
             occluder.GetComponent<Renderer>().material = occluderMaterial;
         }
     }
-
+    public void setHidden() {
+        GameObject[] occluders = GameObject.FindGameObjectsWithTag("Occluder");
+        foreach(GameObject occluder in occluders) {
+            occluder.SetActive(!occluder.activeSelf);
+        }
+    }
+    
     // Start is called before the first frame update
     void Start() {
         
         offsetXSlider.value = PlayerPrefs.GetFloat("offsetX", offsetX);
         offsetYSlider.value = PlayerPrefs.GetFloat("offsetY", offsetY);
         offsetZSlider.value = PlayerPrefs.GetFloat("offsetZ", offsetZ);
+             
+        angleXSlider.value = PlayerPrefs.GetFloat("angleX", angleX);
+        angleYSlider.value = PlayerPrefs.GetFloat("angleY", angleY);
+        angleZSlider.value = PlayerPrefs.GetFloat("angleZ", angleZ);
+
         scaleSlider.value = PlayerPrefs.GetFloat("scale", scale);        
-     
+
         offsetX = PlayerPrefs.GetFloat("offsetX", offsetX);
         offsetY = PlayerPrefs.GetFloat("offsetY", offsetY);
         offsetZ = PlayerPrefs.GetFloat("offsetY", offsetZ);
         scale = PlayerPrefs.GetFloat("scale", scale);    
         angle = PlayerPrefs.GetInt("angle", angle);    
+
+        angleX = PlayerPrefs.GetFloat("angleX", angleX);
+        angleY = PlayerPrefs.GetFloat("angleY", angleY);
+        angleZ = PlayerPrefs.GetFloat("angleZ", angleZ);
 
     }
 
@@ -85,7 +120,7 @@ public class SizeOffsetAdjuster : MonoBehaviour {
         foreach(GameObject offsetObject in offsetObjects) {
             offsetObject.transform.localPosition = new Vector3(offsetX,offsetY,offsetZ);
             offsetObject.transform.localScale = new Vector3(scale,scale,scale);
-            offsetObject.transform.localEulerAngles = new Vector3(angle * 90f, 0, 0);
+            offsetObject.transform.localEulerAngles = new Vector3(angle * 90f + angleX, angleY, angleZ);
         }
 
         smokeMaterial.SetColor("_TintColor", Color.Lerp(smokeA, smokeB, Mathf.Sin(Time.time*pulseSpeed)));

@@ -1,0 +1,7 @@
+f0340be5710e49ffbc7045f1315b9202|J:\GitHub\ALPS ARFoundation Unity\Assets\Scenes\ImageTracking\Images\Rafflesia.jpg|0.254
+aae7522819734dc0b7a253d1566ee402|J:\GitHub\ALPS ARFoundation Unity\Assets\Scenes\ImageTracking\Images\circle_arrow2.png|0.2
+cc21110ed0464421bcc7d3fe8133292d|J:\GitHub\ALPS ARFoundation Unity\Assets\Scenes\ImageTracking\Images\Marker\marker1.png|0.2
+915838c3c0a5499580f58f640fb2a264|J:\GitHub\ALPS ARFoundation Unity\Assets\Scenes\ImageTracking\Images\Marker\marker2.png|0.2
+6aacf796723a4107a341ce91ac335a26|J:\GitHub\ALPS ARFoundation Unity\Assets\Scenes\ImageTracking\Images\Marker\marker3.png|0.2
+f341b5d1c0f7481b8c9b5cfe2973b526|J:\GitHub\ALPS ARFoundation Unity\Assets\Scenes\ImageTracking\Images\Marker\marker4.png|0.2
+734f76b2022c45c8b64de763735bcbf3|J:\GitHub\ALPS ARFoundation Unity\Assets\Scenes\ImageTracking\Images\aw_logo_black_contrast_2 color.png|0.2

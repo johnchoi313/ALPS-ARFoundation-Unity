@@ -1,6 +1,0 @@
-framework module ALPSinternal {
-  umbrella header "ALPSinternal.h"
-
-  export *
-  module * { export * }
-}

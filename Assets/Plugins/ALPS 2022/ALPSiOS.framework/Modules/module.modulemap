@@ -1,0 +1,6 @@
+framework module ALPSiOS {
+  umbrella header "ALPSiOS.h"
+
+  export *
+  module * { export * }
+}

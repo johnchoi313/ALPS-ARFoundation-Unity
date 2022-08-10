@@ -1080,8 +1080,8 @@ MonoBehaviour:
   MIN_POSE_TRANSFORM_ACCURACY_X: 0.7
   MIN_POSE_TRANSFORM_ACCURACY_Y: 0.7
   MIN_POSE_TRANSFORM_ACCURACY_R: 0.2
-  USERNAME: 
-  PASSWORD: 
+  USERNAME: 450054004300
+  PASSWORD: 650074006300640065006d006f00310032003300
   globalFrame: {fileID: 707894983}
   camFrame: {fileID: 1824994030}
   flipGlobal: 0
@@ -2510,7 +2510,7 @@ Transform:
   m_GameObject: {fileID: 1824994028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1922738389}
   m_Father: {fileID: 0}

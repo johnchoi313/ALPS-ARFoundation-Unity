@@ -41,8 +41,8 @@ public unsafe class ALPS2022 : MonoBehaviour {
 	public float MIN_POSE_TRANSFORM_ACCURACY_R = 0.2f; // radians
 
 	[Header("Defined ALPS Login Info:")]
-	public string USERNAME; 
-	public string PASSWORD;
+	public char[] USERNAME; 
+	public char[] PASSWORD;
 
 	[Header("Set to Global Transform:")]
 	public Transform globalFrame;
@@ -81,6 +81,7 @@ public unsafe class ALPS2022 : MonoBehaviour {
 			fixed (char* password = PASSWORD)
 			{ _init(username, password); }
 		}
+		//_init(USERNAME,PASSWORD);
 
 		//Begin Acoustic Location Processing System... (internal on iPad.)
 		_startUpdatingLocation();

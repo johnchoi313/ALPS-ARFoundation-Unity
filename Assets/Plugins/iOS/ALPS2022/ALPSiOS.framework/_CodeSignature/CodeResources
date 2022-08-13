@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		GEbmkkHR7E0ckzFNYxP76T6SfcQ=
+		</data>
 		<key>ALPSStoredDataModel.momd/ALPSStoredDataModel.mom</key>
 		<data>
-		xrOTG33MTsdjAOoYgVJJA7iYiHk=
+		mcrCh7x61Y1zR8JfvbI1xQcR1WE=
 		</data>
 		<key>ALPSStoredDataModel.momd/VersionInfo.plist</key>
 		<data>
@@ -66,11 +70,11 @@
 		</data>
 		<key>Headers/ALPSUnityManager.h</key>
 		<data>
-		2KKig7kOWxaTIio125JZrRHfu3g=
+		W85oal2MDeCbhy0OabA8RXLT6Hs=
 		</data>
 		<key>Headers/ALPSiOS.h</key>
 		<data>
-		yEUNhMC2TiGIegeHwR11Hurbeqc=
+		v6eAyZ9xD4lmwxoRf73/YGZdAi0=
 		</data>
 		<key>Headers/MGLLocationManager.h</key>
 		<data>
@@ -78,7 +82,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VTQ8gI35Z5ziuiA4v2T4nxJarGU=
+		e5mDn7ecM9fOteLqMNzkTuuTv1Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -91,7 +95,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z9NyAjWk77o2OEhHiZqW5jZXw4rT0gBQL2qQ/C0SspE=
+			5JfoHQ3yqnRYUuHTfIcup5mo5vQQZQx3yp6QAiUayGU=
 			</data>
 		</dict>
 		<key>ALPSStoredDataModel.momd/VersionInfo.plist</key>
@@ -196,14 +200,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nHrUxv3wNQ5c7QwAee0E443l/PGoXtAwdjP6+Fzdek0=
+			v5o5bHf8RmUI3bSEGOt3d4FFJtOW1trU09qLegyiLwo=
 			</data>
 		</dict>
 		<key>Headers/ALPSiOS.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UMMpSwtk7ayvrfGwUj5Q97lCppmPEIbZ8vgcleDXRFM=
+			9Y299h7jGhy16UCBRqg5857LUz9UfguTjTEiuHJ/tHM=
 			</data>
 		</dict>
 		<key>Headers/MGLLocationManager.h</key>

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#define ALPS_USERNAME @"ETC"
+#define ALPS_PASSWORD @"etcdemo123"
+
 @interface ALPSUnityManager : NSObject
 
 /**
@@ -34,7 +37,7 @@
 /* ----- METHODS TO BE CALLED FROM UNITY ----- */
 extern "C" {
 
-void _init(char *username, char *password);
+void _init();
 
 void _updateARPose(float x, float y, float z, float eulerX, float eulerY, float eulerZ);
 

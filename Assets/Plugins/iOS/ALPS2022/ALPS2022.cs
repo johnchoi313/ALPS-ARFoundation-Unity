@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 public unsafe class ALPS2022 : MonoBehaviour {
 	
 	[DllImport ("__Internal")]
-	private static extern void _init(char *username, char *password);
+	private static extern void _init();
 
 	[DllImport ("__Internal")]
 	private static extern void _updateARPose(float x, float y, float z, float eulerX, float eulerY, float eulerZ);
@@ -39,10 +39,6 @@ public unsafe class ALPS2022 : MonoBehaviour {
 	public float MIN_POSE_TRANSFORM_ACCURACY_X = 0.7f; // meters
 	public float MIN_POSE_TRANSFORM_ACCURACY_Y = 0.7f; // meters
 	public float MIN_POSE_TRANSFORM_ACCURACY_R = 0.2f; // radians
-
-	[Header("Defined ALPS Login Info:")]
-	public char[] USERNAME; 
-	public char[] PASSWORD;
 
 	[Header("Set to Global Transform:")]
 	public Transform globalFrame;
@@ -76,12 +72,13 @@ public unsafe class ALPS2022 : MonoBehaviour {
 	}
 	void Start() {
 		//Login to ALPS system.		
-		unsafe {
-			fixed (char* username = USERNAME)
-			fixed (char* password = PASSWORD)
-			{ _init(username, password); }
-		}
-		//_init(USERNAME,PASSWORD);
+		//unsafe {
+		//	fixed (char* username = USERNAME)
+		//	fixed (char* password = PASSWORD)
+		//	{ _init(username, password); }
+		//}
+
+		_init();
 
 		//Begin Acoustic Location Processing System... (internal on iPad.)
 		_startUpdatingLocation();
@@ -167,7 +164,15 @@ public unsafe class ALPS2022 : MonoBehaviour {
 
 		//Show ALPS info text		
 		if(info != null) {
-			info.text  = "locX: " + fusedLocation.x.ToString("F2") + "\r\n";
+			info.text  = "camPosX: " + camFrame.position.x.ToString("F2") + "\r\n";
+			info.text += "camPosY: " + camFrame.position.y.ToString("F2") + "\r\n";
+			info.text += "camPosZ: " + camFrame.position.z.ToString("F2") + "\r\n\r\n";
+			
+			info.text += "camRotX: " + camFrame.localEulerAngles.x.ToString("F2") + "\r\n";
+			info.text += "camRotY: " + camFrame.localEulerAngles.y.ToString("F2") + "\r\n";
+			info.text += "camRotZ: " + camFrame.localEulerAngles.z.ToString("F2") + "\r\n\r\n";
+			
+			info.text += "locX: " + fusedLocation.x.ToString("F2") + "\r\n";
 			info.text += "locY: " + fusedLocation.y.ToString("F2") + "\r\n";
 			info.text += "locZ: " + fusedLocation.z.ToString("F2") + "\r\n\r\n";
 			

@@ -43,7 +43,9 @@ public unsafe class ALPS2022 : MonoBehaviour {
 	[Header("Set to Global Transform:")]
 	public Transform globalFrame;
 	public Transform camFrame;
+
 	public bool flipGlobal = false;
+	public float globalRotateOffset = 90;
 
 	[Header("Optional Info Text")]
 	public Text info;
@@ -68,7 +70,7 @@ public unsafe class ALPS2022 : MonoBehaviour {
 	void Awake() {
 		pLocation = new float[3];
 		pAccuracy = new float[4];
-		pTransform = new float[16];
+		pTransform = new float[4];
 	}
 	void Start() {
 		//Login to ALPS system.		
@@ -113,53 +115,44 @@ public unsafe class ALPS2022 : MonoBehaviour {
 					pTransform[1] = _transform[1];
 					pTransform[2] = _transform[2];
 					pTransform[3] = _transform[3];
-					pTransform[4] = _transform[4];
-					pTransform[5] = _transform[5];
-					pTransform[6] = _transform[6];
-					pTransform[7] = _transform[7];
-					pTransform[8] = _transform[8];
-					pTransform[9] = _transform[9];
-					pTransform[10] = _transform[10];
-					pTransform[11] = _transform[11];
-					pTransform[12] = _transform[12];
-					pTransform[13] = _transform[13];
-					pTransform[14] = _transform[14];
-					pTransform[15] = _transform[15];
 				}
 			}
 
 			//Get new location values
 			fusedLocation = new Vector3(pLocation[0],pLocation[1],pLocation[2]);
-			//Get new matrix values
-			fusedMatrix = new Matrix4x4();
-			fusedMatrix.SetRow(0, new Vector4(pTransform[0], pTransform[1], pTransform[2], pTransform[3]));
-			fusedMatrix.SetRow(1, new Vector4(pTransform[4], pTransform[5], pTransform[6], pTransform[7]));
-			fusedMatrix.SetRow(2, new Vector4(pTransform[8], pTransform[9], pTransform[10],pTransform[11]));
-			fusedMatrix.SetRow(3, new Vector4(pTransform[12],pTransform[13],pTransform[14],pTransform[15]));
 			//Get new translation values
-			fusedTranslation = fusedMatrix.GetColumn(3); //third colum is pos
-			//Get new rotation values
-			fusedRotation = fusedMatrix.rotation;
+			fusedTranslation = new Vector3(pTransform[0],pTransform[2],pTransform[1]); //third colum is pos
 			//Get new yaw
-			fusedYaw = fusedRotation.eulerAngles.y;
+			fusedYaw = pTransform[3];
 			//Get new accuracy values
 			fusedLocationAccuracy = new Vector3(pAccuracy[0],pAccuracy[1],pAccuracy[2]);
 			fusedYawAccuracy = pAccuracy[3];
 
 			//------------UPDATE GLOBAL FRAME WITH NEW TRANSFORM VALUES-------------//
-			if(fusedLocationAccuracy.x < MIN_POSE_TRANSFORM_ACCURACY_X && fusedLocationAccuracy.z < MIN_POSE_TRANSFORM_ACCURACY_Y && fusedYawAccuracy < MIN_POSE_TRANSFORM_ACCURACY_R) {
+			//if(fusedLocationAccuracy.x < MIN_POSE_TRANSFORM_ACCURACY_X && fusedLocationAccuracy.z < MIN_POSE_TRANSFORM_ACCURACY_Y && fusedYawAccuracy < MIN_POSE_TRANSFORM_ACCURACY_R) {
 				if(globalFrame != null) { //Apply new transform to global root node:
-					float lookX = Mathf.Cos((flipGlobal?-1:1) * fusedYaw);
-					float lookY = Mathf.Sin((flipGlobal?-1:1) * fusedYaw);
+					//float lookX = Mathf.Cos((flipGlobal?-1:1) * fusedYaw);
+					//float lookY = Mathf.Sin((flipGlobal?-1:1) * fusedYaw);
 
-					globalFrame.transform.position = new Vector3(0,0,0);
-					globalFrame.transform.LookAt(new Vector3(lookX, 0, lookY));
-					globalFrame.transform.Rotate(0,90,0);
+					//globalFrame.transform.position = new Vector3(0,0,0);
+					//globalFrame.transform.LookAt(new Vector3(lookX, 0, lookY));
+					//globalFrame.transform.Rotate(0,globalRotateOffset,0);
 
 					//Vector3 dist = globalFrame.position - camFrame.position;
-					globalFrame.transform.position = new Vector3(fusedTranslation.x, fusedTranslation.y, fusedTranslation.z) * (flipGlobal?-1:1); //+dist
+					//globalFrame.transform.position = new Vector3(fusedTranslation.x, fusedTranslation.y, fusedTranslation.z) * (flipGlobal?-1:1); //+dist
+				
+
+					globalFrame.transform.position = new Vector3(fusedTranslation.x, fusedTranslation.y, fusedTranslation.z);
+					globalFrame.transform.localEulerAngles = new Vector3(0,fusedYaw * 57.2958f,0);
+
+					//globalFrame.transform.Rotate(0,globalRotateOffset,0);
+
+					//Vector3 dist = globalFrame.position - camFrame.position;
+					
+				
+				
 				}
-			}
+			//}
 		}
 
 		//Show ALPS info text		

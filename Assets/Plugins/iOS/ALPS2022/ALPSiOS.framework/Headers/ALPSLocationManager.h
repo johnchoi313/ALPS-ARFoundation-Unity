@@ -82,6 +82,8 @@ typedef struct SCNMatrix4 SCNMatrix4;
  * @param poseTransformAccuracy A struct containing the estimated accuracy of the poseTransform.
  */
 -(void)alpsLocationManager:(ALPSLocationManager *)locationManager didUpdateLocation:(ALPSLocation*)location poseTransform:(SCNMatrix4)poseTransform poseTransformAccuracy:(ALPSPoseTransformAccuracy)poseTransformAccuracy;
+
+-(void)alpsLocationManager:(ALPSLocationManager *)locationManager didUpdateLocation:(ALPSLocation*)location poseTransformX:(float)poseTransformX poseTransformY:(float)poseTransformY poseTransformZ:(float)poseTransformZ poseTransformR:(float)poseTransformR poseTransformAccuracy:(ALPSPoseTransformAccuracy)poseTransformAccuracy;
 @end
 
 

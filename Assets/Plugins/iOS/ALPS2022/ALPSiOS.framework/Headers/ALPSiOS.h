@@ -16,7 +16,7 @@
 #import <ALPSiOS/ALPSBuilding+CoreDataProperties.h>
 #import <ALPSiOS/ALPSOrganization+CoreDataProperties.h>
 #import <ALPSiOS/ALPSLocation.h>
-#import <ALPSiOS/ALPSUnityManager.h>
+//#import <ALPSiOS/ALPSUnityManager.h>
 
 //! Project version number for ALPSiOS.
 FOUNDATION_EXPORT double ALPSiOSVersionNumber;

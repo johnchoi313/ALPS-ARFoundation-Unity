@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		GEbmkkHR7E0ckzFNYxP76T6SfcQ=
-		</data>
 		<key>ALPSStoredDataModel.momd/ALPSStoredDataModel.mom</key>
 		<data>
 		mcrCh7x61Y1zR8JfvbI1xQcR1WE=
@@ -54,7 +50,7 @@
 		</data>
 		<key>Headers/ALPSLocationManager.h</key>
 		<data>
-		w3jPaMmERT+tNQfS87dp10u/5sA=
+		gVCL8jvgt9UuvAnt5xqQg04E5ss=
 		</data>
 		<key>Headers/ALPSOrganization+CoreDataClass.h</key>
 		<data>
@@ -74,7 +70,7 @@
 		</data>
 		<key>Headers/ALPSiOS.h</key>
 		<data>
-		v6eAyZ9xD4lmwxoRf73/YGZdAi0=
+		yEUNhMC2TiGIegeHwR11Hurbeqc=
 		</data>
 		<key>Headers/MGLLocationManager.h</key>
 		<data>
@@ -172,7 +168,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fI65Dk8ljnLqt4Z/qekHuQTRhvl2/UPqLCPi/Yx1DnU=
+			uI1M6Ly2gbH5gllv7AF1zYGNXdpaZJOcpXFrm6KiXCk=
 			</data>
 		</dict>
 		<key>Headers/ALPSOrganization+CoreDataClass.h</key>
@@ -207,7 +203,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Y299h7jGhy16UCBRqg5857LUz9UfguTjTEiuHJ/tHM=
+			UMMpSwtk7ayvrfGwUj5Q97lCppmPEIbZ8vgcleDXRFM=
 			</data>
 		</dict>
 		<key>Headers/MGLLocationManager.h</key>

@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/HumanBodyTracking3D SmokeDress.unity
     guid: 6966f06b3f72e452eba87b358de6786a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ALPS Test.unity
     guid: 247da595be5fe8e408ccf72ce2d0c904
+  - enabled: 1
+    path: Assets/Scenes/MuseumLab ALPS.unity
+    guid: 59d6a3626d5694d3a923d1bc7c22b43c
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f8ce26fe3bc69499b9be4b2378e97a94,
       type: 2}

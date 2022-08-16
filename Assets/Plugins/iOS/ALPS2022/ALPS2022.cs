@@ -92,7 +92,7 @@ public unsafe class ALPS2022 : MonoBehaviour {
 		if (Application.platform == RuntimePlatform.IPhonePlayer) {			
 			//------ATTEMPT TO FUSE ALPS WITH ARKIT DATA TO GET NEW TRANSFORM DATA--------//
 			_updateARPose( //Force feed ARKit camera data into ALPS for fusion:
-				camFrame.position.x, camFrame.position.y, camFrame.position.z,                        //position
+				camFrame.position.x, camFrame.position.y, -camFrame.position.z,                        //position
 				camFrame.localEulerAngles.x, camFrame.localEulerAngles.y, camFrame.localEulerAngles.z //rotation
 			);
 			//Get resulting fused ALPS + ARkit data:
@@ -130,7 +130,7 @@ public unsafe class ALPS2022 : MonoBehaviour {
 
 			//------------UPDATE GLOBAL FRAME WITH NEW TRANSFORM VALUES-------------//
 			//if(fusedLocationAccuracy.x < MIN_POSE_TRANSFORM_ACCURACY_X && fusedLocationAccuracy.z < MIN_POSE_TRANSFORM_ACCURACY_Y && fusedYawAccuracy < MIN_POSE_TRANSFORM_ACCURACY_R) {
-				if(globalFrame != null) { //Apply new transform to global root node:
+				//if(globalTranslatorFrame != null && globalRotatorFrame != null) { //Apply new transform to global root node:
 					//float lookX = Mathf.Cos((flipGlobal?-1:1) * fusedYaw);
 					//float lookY = Mathf.Sin((flipGlobal?-1:1) * fusedYaw);
 
@@ -142,8 +142,41 @@ public unsafe class ALPS2022 : MonoBehaviour {
 					//globalFrame.transform.position = new Vector3(fusedTranslation.x, fusedTranslation.y, fusedTranslation.z) * (flipGlobal?-1:1); //+dist
 				
 
-					globalFrame.transform.position = new Vector3(fusedTranslation.x, fusedTranslation.y, fusedTranslation.z);
-					globalFrame.transform.localEulerAngles = new Vector3(0,fusedYaw * 57.2958f,0);
+				if(flipGlobal) {
+					
+					float lookX = Mathf.Cos(-fusedYaw);
+					float lookY = Mathf.Sin(-fusedYaw);
+
+					globalFrame.transform.position = new Vector3(0,0,0);
+					globalFrame.transform.LookAt(new Vector3(lookX, 0, lookY));
+					globalFrame.transform.Rotate(0,globalRotateOffset,0);
+
+					//Vector3 dist = globalFrame.position - camFrame.position;
+
+					globalFrame.transform.position = new Vector3(-fusedTranslation.x, fusedTranslation.y, fusedTranslation.z); //+ dist;
+				} 
+				//If global is universe frame
+				else {
+					float lookX = Mathf.Cos(fusedYaw);
+					float lookY = Mathf.Sin(fusedYaw);
+
+					globalFrame.transform.position = new Vector3(0,0,0);
+					globalFrame.transform.LookAt(new Vector3(lookX, 0, lookY));
+					globalFrame.transform.Rotate(0,globalRotateOffset,0);
+
+					globalFrame.transform.Translate(fusedTranslation.x, -fusedTranslation.y, -fusedTranslation.z);
+				}
+
+
+					//globalTranslatorFrame.localPosition = new Vector3(0,0,0);
+					//globalRotatorFrame.localEulerAngles = new Vector3(0,0,0);
+					//globalTranslatorFrame.localEulerAngles = new Vector3(0,0,0);
+
+
+					//globalTranslatorFrame.Translate(-fusedTranslation.x, -fusedTranslation.y, fusedTranslation.z);
+					//globalTranslatorFrame.RotateAround(new Vector3(0,0,0), Vector3.up, fusedYaw * 57.2958f);
+
+					//globalRotatorFrame.Rotate(0,-fusedYaw * 57.2958f,0);
 
 					//globalFrame.transform.Rotate(0,globalRotateOffset,0);
 
@@ -151,7 +184,7 @@ public unsafe class ALPS2022 : MonoBehaviour {
 					
 				
 				
-				}
+				//}
 			//}
 		}
 

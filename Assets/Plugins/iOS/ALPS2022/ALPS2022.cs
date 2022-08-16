@@ -44,9 +44,6 @@ public unsafe class ALPS2022 : MonoBehaviour {
 	public Transform globalFrame;
 	public Transform camFrame;
 
-	public bool flipGlobal = false;
-	public float globalRotateOffset = 90;
-
 	[Header("Optional Info Text")]
 	public Text info;
 	
@@ -142,31 +139,15 @@ public unsafe class ALPS2022 : MonoBehaviour {
 					//globalFrame.transform.position = new Vector3(fusedTranslation.x, fusedTranslation.y, fusedTranslation.z) * (flipGlobal?-1:1); //+dist
 				
 
-				if(flipGlobal) {
-					
-					float lookX = Mathf.Cos(-fusedYaw);
-					float lookY = Mathf.Sin(-fusedYaw);
-
-					globalFrame.transform.position = new Vector3(0,0,0);
-					globalFrame.transform.LookAt(new Vector3(lookX, 0, lookY));
-					globalFrame.transform.Rotate(0,globalRotateOffset,0);
-
-					//Vector3 dist = globalFrame.position - camFrame.position;
-
-					globalFrame.transform.position = new Vector3(-fusedTranslation.x, fusedTranslation.y, fusedTranslation.z); //+ dist;
-				} 
-				//If global is universe frame
-				else {
 					float lookX = Mathf.Cos(fusedYaw);
 					float lookY = Mathf.Sin(fusedYaw);
 
 					globalFrame.transform.position = new Vector3(0,0,0);
 					globalFrame.transform.LookAt(new Vector3(lookX, 0, lookY));
-					globalFrame.transform.Rotate(0,globalRotateOffset,0);
+					globalFrame.transform.Rotate(0,90,0);
 
 					globalFrame.transform.Translate(fusedTranslation.x, -fusedTranslation.y, -fusedTranslation.z);
-				}
-
+				
 
 					//globalTranslatorFrame.localPosition = new Vector3(0,0,0);
 					//globalRotatorFrame.localEulerAngles = new Vector3(0,0,0);

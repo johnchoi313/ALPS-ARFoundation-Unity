@@ -7,15 +7,21 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 public unsafe class ALPS2022 : MonoBehaviour {
-	
+
+	/**
+	* Method to initialize ALPS. Note that ALPS iOS framework right now is hardcoded for ETC and Museumlab only, and will need a new framework for other locations.
+	*/	
 	[DllImport ("__Internal")]
 	private static extern void _init();
 
+	/**
+	* Method to start updating ALPS with ARKit data. This should be run every frame after initializing.
+	*/
 	[DllImport ("__Internal")]
 	private static extern void _updateARPose(float x, float y, float z, float eulerX, float eulerY, float eulerZ);
 
 	/**
-	* Method to start receiving location and transform updates from ALPS. This should be run after initializing the ALPSUnityManager using sharedManagerWithUsername()
+	* Method to start receiving location and transform updates from ALPS. This should be run once after initializing.
 	*/
 	[DllImport ("__Internal")]
 	private static extern void _startUpdatingLocation();
@@ -30,7 +36,7 @@ public unsafe class ALPS2022 : MonoBehaviour {
 	* Method to get the current location, location and rotation accuracy and AR transform data.
 	* @param location pointer to an array of floats of length 3. The current location of the device as determined by ALPS will be copied into this array as [x, y, z]
 	* @param locationAccuracy pointer to an array of floats of length 4. The accuracy of the location and rotation of the device in meters as determined by ALPS will be copied into this array as [accuracyX, accuracyY, accuracyZ, accuracyRotation]
-	* @param transform pointer to an array of floats of length 16. The current 3D 4x4 transformation matrix to transform ARKit's frame of reference to ALPS' frame of reference will be copied into this array as a flattened SCNMatrix4 (see https://developer.apple.com/documentation/scenekit/scnmatrix4?language=objc). The SCNMatrix4 elements are copied into the array in the following order [m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44].
+	* @param transform pointer to an array of floats of length 4. It represents [transX,transY,transZ,transYaw], in ARKit axes. Note that this is flipped from Unity -> X,Z,Y.
 	*/
 	[DllImport ("__Internal")]
 	private static extern void _getLocationAndTransform (float *location, float *locationAccuracy, float *transform);
@@ -55,15 +61,10 @@ public unsafe class ALPS2022 : MonoBehaviour {
 	[Header("ALPS->Unity Values.")]
 	public Vector3 fusedLocation;
 	public Vector3 fusedLocationAccuracy;
-
-	public Matrix4x4 fusedMatrix;
 	public Vector3 fusedTranslation;
-	public Quaternion fusedRotation;
-
 	public float fusedYaw;
 	public float fusedYawAccuracy;
 	
-
 	void Awake() {
 		pLocation = new float[3];
 		pAccuracy = new float[4];
@@ -71,14 +72,7 @@ public unsafe class ALPS2022 : MonoBehaviour {
 	}
 	void Start() {
 		//Login to ALPS system.		
-		//unsafe {
-		//	fixed (char* username = USERNAME)
-		//	fixed (char* password = PASSWORD)
-		//	{ _init(username, password); }
-		//}
-
 		_init();
-
 		//Begin Acoustic Location Processing System... (internal on iPad.)
 		_startUpdatingLocation();
 	}
@@ -118,7 +112,7 @@ public unsafe class ALPS2022 : MonoBehaviour {
 			//Get new location values
 			fusedLocation = new Vector3(pLocation[0],pLocation[1],pLocation[2]);
 			//Get new translation values
-			fusedTranslation = new Vector3(pTransform[0],pTransform[2],pTransform[1]); //third colum is pos
+			fusedTranslation = new Vector3(pTransform[0],pTransform[2],pTransform[1]);
 			//Get new yaw
 			fusedYaw = pTransform[3];
 			//Get new accuracy values
@@ -127,18 +121,7 @@ public unsafe class ALPS2022 : MonoBehaviour {
 
 			//------------UPDATE GLOBAL FRAME WITH NEW TRANSFORM VALUES-------------//
 			//if(fusedLocationAccuracy.x < MIN_POSE_TRANSFORM_ACCURACY_X && fusedLocationAccuracy.z < MIN_POSE_TRANSFORM_ACCURACY_Y && fusedYawAccuracy < MIN_POSE_TRANSFORM_ACCURACY_R) {
-				//if(globalTranslatorFrame != null && globalRotatorFrame != null) { //Apply new transform to global root node:
-					//float lookX = Mathf.Cos((flipGlobal?-1:1) * fusedYaw);
-					//float lookY = Mathf.Sin((flipGlobal?-1:1) * fusedYaw);
-
-					//globalFrame.transform.position = new Vector3(0,0,0);
-					//globalFrame.transform.LookAt(new Vector3(lookX, 0, lookY));
-					//globalFrame.transform.Rotate(0,globalRotateOffset,0);
-
-					//Vector3 dist = globalFrame.position - camFrame.position;
-					//globalFrame.transform.position = new Vector3(fusedTranslation.x, fusedTranslation.y, fusedTranslation.z) * (flipGlobal?-1:1); //+dist
-				
-
+				if(globalFrame != null) { //Apply new transform to global root node:
 					float lookX = Mathf.Cos(fusedYaw);
 					float lookY = Mathf.Sin(fusedYaw);
 
@@ -147,25 +130,7 @@ public unsafe class ALPS2022 : MonoBehaviour {
 					globalFrame.transform.Rotate(0,90,0);
 
 					globalFrame.transform.Translate(fusedTranslation.x, -fusedTranslation.y, -fusedTranslation.z);
-				
-
-					//globalTranslatorFrame.localPosition = new Vector3(0,0,0);
-					//globalRotatorFrame.localEulerAngles = new Vector3(0,0,0);
-					//globalTranslatorFrame.localEulerAngles = new Vector3(0,0,0);
-
-
-					//globalTranslatorFrame.Translate(-fusedTranslation.x, -fusedTranslation.y, fusedTranslation.z);
-					//globalTranslatorFrame.RotateAround(new Vector3(0,0,0), Vector3.up, fusedYaw * 57.2958f);
-
-					//globalRotatorFrame.Rotate(0,-fusedYaw * 57.2958f,0);
-
-					//globalFrame.transform.Rotate(0,globalRotateOffset,0);
-
-					//Vector3 dist = globalFrame.position - camFrame.position;
-					
-				
-				
-				//}
+				}
 			//}
 		}
 

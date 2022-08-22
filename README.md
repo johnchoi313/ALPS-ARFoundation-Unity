@@ -1,6 +1,6 @@
 # ALPS ARFoundation-Unity Example Integration Project
 
-<img src="https://img.shields.io/badge/unity-2020.3.38f1-blue"/><img src="https://img.shields.io/badge/platform-iOS-green"/><img src="https://img.shields.io/badge/license-MIT-red"/> 
+<img src="https://img.shields.io/badge/unity-2020.3.38f1-blue"/> <img src="https://img.shields.io/badge/platform-iOS-green"/> <img src="https://img.shields.io/badge/license-MIT-red"/> 
 
 Example projects that use [*AR Foundation 4.1*](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html) and demonstrate its functionality with sample assets and components.
 

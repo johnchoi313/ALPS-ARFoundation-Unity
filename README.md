@@ -3,11 +3,7 @@
 <img src="https://img.shields.io/badge/unity-2020.3.38f1-blue"/> <img src="https://img.shields.io/badge/platform-iOS-green"/> <img src="https://img.shields.io/badge/license-MIT-red"/> 
 
 
-Earth Heightmap node:
-
-https://user-images.githubusercontent.com/6877923/123006036-64e2e780-d3b7-11eb-922e-018994b32da5.mov
-
-![ALPS Demo Video](/ReadmeImages/ALPS_MuseumLab_Video.MOV) <br/>
+https://user-images.githubusercontent.com/6497727/186027742-1699954a-b9fd-4a31-9339-59028599008e.MOV
 *Video of ALPS Running.*
 
 Example projects that use [*AR Foundation 4.1*](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html) and demonstrate its functionality with sample assets and components.

@@ -71,13 +71,13 @@ public unsafe class ALPS2022 : MonoBehaviour {
 		pTransform = new float[4];
 	}
 	void Start() {
-		//Login to ALPS system.		
-		_init();
-		//Begin Acoustic Location Processing System... (internal on iPad.)
-		_startUpdatingLocation();
+		if (Application.platform == RuntimePlatform.IPhonePlayer) {			
+			//Login to ALPS system.		
+			_init();
+			//Begin Acoustic Location Processing System... (internal on iPad.)
+			_startUpdatingLocation();
+		}
 	}
-
-
 	void Update () {
 		//Only run ALPS system on iOS devices.
 		if (Application.platform == RuntimePlatform.IPhonePlayer) {			

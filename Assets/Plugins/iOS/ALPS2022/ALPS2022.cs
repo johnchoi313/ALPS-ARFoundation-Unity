@@ -156,7 +156,7 @@ public unsafe class ALPS2022 : MonoBehaviour {
 			info.text += "accX: " + fusedLocationAccuracy.x.ToString("F2") + "\r\n";
 			info.text += "accY: " + fusedLocationAccuracy.y.ToString("F2") + "\r\n";
 			info.text += "accZ: " + fusedLocationAccuracy.z.ToString("F2") + "\r\n";
-			info.text += "accYaw: " + fusedYawAccuracy.ToString("F2") + "\r\n\r\n";
+			info.text += "accYaw: " + fusedYawAccuracy.ToString("F2");
 		}
 	}
 }

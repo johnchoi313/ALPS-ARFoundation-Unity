@@ -10,15 +10,15 @@
 
 There are two major scenes:
 
-![ALPS Manager Info](/ReadMeImages/ALPS_Manager_Info.png) <br/>
+![ALPS Manager Info](/ReadmeImages/ALPS_Manager_Info.png) <br/>
 
 text
 
-![ALPS ETC Layout](/ReadMeImages/ALPS_ETC_Layout.jpg) <br/>
+![ALPS ETC Layout](/ReadmeImages/ALPS_ETC_Layout.jpg) <br/>
 
 text
 
-![Global Frame](/ReadMeImages/GlobalFrame.png) <br/>
+![Global Frame](/ReadmeImages/GlobalFrame.png) <br/>
 
 text
 
@@ -26,24 +26,24 @@ text
 
 ### Build Settings
 
-![Build Settings](/ReadMeImages/BuildSettings.jpg) <br/>
+![Build Settings](/ReadmeImages/BuildSettings.jpg) <br/>
 
 text
 
 
 ### Player Settings
 
-![Project Settings](/ReadMeImages/ProjectSettings.jpg) <br/>
+![Project Settings](/ReadmeImages/ProjectSettings.jpg) <br/>
 
 text
 
 ### XCode Settings
 
-![XCode Team](/ReadMeImages/XCode_Team.jpg) <br/>
+![XCode Team](/ReadmeImages/XCode_Team.jpg) <br/>
 
 text
 
-![XCode Permissions](/ReadMeImages/XCode_Permissions.jpg) <br/>
+![XCode Permissions](/ReadmeImages/XCode_Permissions.jpg) <br/>
 
 text
 
@@ -52,13 +52,13 @@ text
 Needs to have internet access!
 
 
-![CMU ETC](/ReadMeImages/cmuetc.jpg) <br/>
+![CMU ETC](/ReadmeImages/cmuetc.jpg) <br/>
 text
 
 CMU ETC
 700 Technology Dr, Pittsburgh, PA 15219
 
-![Museum Lab](/ReadMeImages/museumlab.jpg) <br/>
+![Museum Lab](/ReadmeImages/museumlab.jpg) <br/>
 text
 
 MuseumLab of Children's Museum of Pittsburgh
@@ -87,11 +87,11 @@ https://assetstore.unity.com/packages/tools/integration/lite-fps-counter-probabl
 
 ## With the support of
 
-![ALPS Logo](/ReadMeImages/alps-logo-dark.png) <br/>
+![ALPS Logo](/ReadmeImages/alps-logo-dark.png) <br/>
 text
 
-![ETC Logo](/ReadMeImages/etc_logo.jpg) <br/>
+![ETC Logo](/ReadmeImages/etc_logo.jpg) <br/>
 text
 
-![MuseumLab Logo](/ReadMeImages/museumlab_Logo.png) <br/>
+![MuseumLab Logo](/ReadmeImages/museumlab_Logo.png) <br/>
 text

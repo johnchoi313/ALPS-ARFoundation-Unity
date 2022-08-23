@@ -2,7 +2,7 @@
 
 <img src="https://img.shields.io/badge/unity-2020.3.38f1-blue"/> <img src="https://img.shields.io/badge/platform-iOS-green"/> <img src="https://img.shields.io/badge/license-MIT-red"/> 
 
-https://user-images.githubusercontent.com/6497727/186027742-1699954a-b9fd-4a31-9339-59028599008e.MOV <br/>
+![Video of ALPS Running](https://user-images.githubusercontent.com/6497727/186027742-1699954a-b9fd-4a31-9339-59028599008e.MOV) <br/>
 
 *Video of ALPS Running.*
 

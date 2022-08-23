@@ -9,32 +9,32 @@ https://user-images.githubusercontent.com/6497727/186027742-1699954a-b9fd-4a31-9
 
 There are two major scenes:
 
-![Scenes](/ReadMeImages/ALPS_Manager_Info.png)
+![ALPS Manager Info](/ReadMeImages/ALPS_Manager_Info.png)
 
-![Scenes](/ReadMeImages/ALPS_ETC_Layout.jpg)
+![ALPS ETC Layout](/ReadMeImages/ALPS_ETC_Layout.jpg)
 
-![Scenes](/ReadMeImages/GlobalFrame.png)
+![Global Frame](/ReadMeImages/GlobalFrame.png)
 
 ## Compilation
 
 ### Build Settings
 
-![Scenes](/ReadMeImages/BuildSettings.jpg)
+![Build Settings](/ReadMeImages/BuildSettings.jpg)
 
 
 
 
 ### Player Settings
 
-![Scenes](/ReadMeImages/ProjectSettings.jpg)
+![Project Settings](/ReadMeImages/ProjectSettings.jpg)
 
 
 ### XCode Settings
 
 
-![Scenes](/ReadMeImages/XCode_Team.jpg)
+![XCode Team](/ReadMeImages/XCode_Team.jpg)
 
-![Scenes](/ReadMeImages/XCode_Permissions.jpg)
+![XCode Permissions](/ReadMeImages/XCode_Permissions.jpg)
 
 
 ## Usage
@@ -42,13 +42,13 @@ There are two major scenes:
 Needs to have internet access!
 
 
-![Scenes](/ReadMeImages/cmuetc.jpg)
+![CMU ETC](/ReadMeImages/cmuetc.jpg)
 
 
 CMU ETC
 700 Technology Dr, Pittsburgh, PA 15219
 
-![Scenes](/ReadMeImages/museumlab.jpg)
+![Museum Lab](/ReadMeImages/museumlab.jpg)
 
 
 MuseumLab of Children's Museum of Pittsburgh
@@ -77,10 +77,8 @@ https://assetstore.unity.com/packages/tools/integration/lite-fps-counter-probabl
 
 ## With the support of
 
+![ALPS Logo](/ReadMeImages/alps-logo-dark.png)
 
+![ETC Logo](/ReadMeImages/etc_logo.jpg)
 
-![Scenes](/ReadMeImages/alps-logo-dark.png)
-
-![Scenes](/ReadMeImages/etc_logo.jpg)
-
-![Scenes](/ReadMeImages/museumlab_Logo.png)
+![MuseumLab Logo](/ReadMeImages/museumlab_Logo.png)

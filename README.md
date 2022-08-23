@@ -3,6 +3,7 @@
 <img src="https://img.shields.io/badge/unity-2020.3.38f1-blue"/> <img src="https://img.shields.io/badge/platform-iOS-green"/> <img src="https://img.shields.io/badge/license-MIT-red"/> 
 
 https://user-images.githubusercontent.com/6497727/186027742-1699954a-b9fd-4a31-9339-59028599008e.MOV <br/>
+
 *Video of ALPS Running.*
 
 ## Unity Notes
@@ -11,9 +12,15 @@ There are two major scenes:
 
 ![ALPS Manager Info](/ReadMeImages/ALPS_Manager_Info.png) <br/>
 
+text
+
 ![ALPS ETC Layout](/ReadMeImages/ALPS_ETC_Layout.jpg) <br/>
 
+text
+
 ![Global Frame](/ReadMeImages/GlobalFrame.png) <br/>
+
+text
 
 ## Compilation
 
@@ -21,21 +28,24 @@ There are two major scenes:
 
 ![Build Settings](/ReadMeImages/BuildSettings.jpg) <br/>
 
-
+text
 
 
 ### Player Settings
 
 ![Project Settings](/ReadMeImages/ProjectSettings.jpg) <br/>
 
+text
 
 ### XCode Settings
 
-
 ![XCode Team](/ReadMeImages/XCode_Team.jpg) <br/>
+
+text
 
 ![XCode Permissions](/ReadMeImages/XCode_Permissions.jpg) <br/>
 
+text
 
 ## Usage
 
@@ -43,13 +53,13 @@ Needs to have internet access!
 
 
 ![CMU ETC](/ReadMeImages/cmuetc.jpg) <br/>
-
+text
 
 CMU ETC
 700 Technology Dr, Pittsburgh, PA 15219
 
 ![Museum Lab](/ReadMeImages/museumlab.jpg) <br/>
-
+text
 
 MuseumLab of Children's Museum of Pittsburgh
 6 Allegheny Square E Suite 101, Pittsburgh, PA 15212
@@ -78,7 +88,10 @@ https://assetstore.unity.com/packages/tools/integration/lite-fps-counter-probabl
 ## With the support of
 
 ![ALPS Logo](/ReadMeImages/alps-logo-dark.png) <br/>
+text
 
 ![ETC Logo](/ReadMeImages/etc_logo.jpg) <br/>
+text
 
 ![MuseumLab Logo](/ReadMeImages/museumlab_Logo.png) <br/>
+text

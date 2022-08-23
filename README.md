@@ -2,7 +2,8 @@
 
 <img src="https://img.shields.io/badge/unity-2020.3.38f1-blue"/> <img src="https://img.shields.io/badge/platform-iOS-green"/> <img src="https://img.shields.io/badge/license-MIT-red"/> 
 
-https://user-images.githubusercontent.com/6497727/186274526-404aadf5-463e-43ac-8a1d-4362eee6932e.MOV <br/>
+https://user-images.githubusercontent.com/6497727/186274526-404aadf5-463e-43ac-8a1d-4362eee6932e.MOV
+
 *Video of ALPS Running.*
 
 ## Unity Notes

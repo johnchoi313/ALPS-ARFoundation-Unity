@@ -153,20 +153,17 @@ Have fun! :)
 This project was made possible with the support of the following organizations:
 
 ### <u>Yodel Labs</u>
-
 ![ALPS Logo](/ReadmeImages/alps-logo-dark.png) <br/>
 
 [**Yodel Labs**](https://www.yodellabs.com/
 ) is a Carnegie Mellon University spinout founded in 2017. Our mission is to provide the most accurate location services in the mobile device industry, enabling your mobile app to bridge the gap between the virtual and the physical world.
 
 ### <u>Carnegie Mellon University Entertainment Technology Center</u>
-
 ![ETC Logo](/ReadmeImages/etc_logo.jpg) <br/>
 
 Carnegie Mellon University's [**Entertainment Technology Center (ETC)**](https://www.etc.cmu.edu/) was founded in 1998 with Randy Pausch and Don Marinelli as the co-directors. The faculty and staff worked together to articulate our academic mission which focuses on educational goals and creative development. And we also created an R&D Agenda exploring transformational games, innovation by design and interactive storytelling. Throughout, we work to prepare students to graduate as creative professionals The ETC's unique, two-year, Master of Entertainment Technology (MET) degree was founded as a joint venture between Carnegie Mellon University’s School of Computer Science and the College of Fine Arts.  The MET is currently considered a terminal degree.
 
 ### <u>Children's Museum of Pittsburgh MuseumLab</u>
-
 ![MuseumLab Logo](/ReadmeImages/museumlab_Logo.png) <br/>
 
 [**Children’s Museum of Pittsburgh**](https://pittsburghkids.org/) has grown along with your family, creating [**MuseumLab**](https://museumlab.org/) as a place where kids 10+ can have cutting-edge experiences in art, tech and making. It’s just the thing for their inquiring minds, increasing skills and independent inclinations. It all takes place in a “beautiful ruin” located right next door to the Children’s Museum, the former Carnegie Free Library of Allegheny. In creating MuseumLab, we renovated the building to reveal much of its original 1890 archways, columns and mosaic floors, and designed a unique space that honors the past while welcoming the future. And with the creation of MuseumLab, we’ve created the largest cultural campus for children in the country. Right here in Pittsburgh.

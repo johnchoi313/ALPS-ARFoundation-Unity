@@ -12,10 +12,9 @@ https://user-images.githubusercontent.com/6497727/186274526-404aadf5-463e-43ac-8
 This repository integrates the ALPS iOS Framework with Unity's ARFoundation by providing an easy-to-use C# wrapper. 
 This has been tested to work on Unity 2020.3.38f1, and will likely work on later versions as well. For more information about ARFoundation, please visit this link: https://github.com/Unity-Technologies/arfoundation-samples . ARFoundation has already been installed and configured in this repository, so you shouldn't need to change any settings for ARFoundation, unless you change the Unity version.
 
-
 ## Usage Notes
 
-###Locations
+### Locations
 This library has been configured to work at only **two** (2) locations where the ALPS system has already been physically installed, calibrated and configured. These locations are as follows:
 
 * **Carnegie Mellon University Entertainment Technology Center** *(1st Floor, Randy Pausch Auditorium)* <br/>
@@ -23,14 +22,13 @@ This library has been configured to work at only **two** (2) locations where the
 * **Children's Museum of Pittsburgh** *(1st Floor, MuseumLab TechLab)* <br/>
 6 Allegheny Square E Suite 101, Pittsburgh, PA 15212
 
-
 ![CMU ETC](/ReadmeImages/cmuetc.jpg) <br/>
 *Carnegie Mellon University's Entertainment Technology Center, main building.*
 
 ![Museum Lab](/ReadmeImages/museumlab.jpg) <br/>
 *Children's Museum of Pittsburgh, MuseumLab building.*
 
-###Running the ALPS app
+### Running the ALPS app
 To use the app, simply run the iOS app. Note that an active internet connection is required to connect to the ALPS positioning system! When the app is active, the installed ALPS beacons should automatically turn on and begin beaconing location data. When the ALPS system is not in use, they should automatically turn on and go to standby mode after 100 seconds of no activity.
 
 ![Museum Lab](/ReadmeImages/ALPS_sysadmin.png) <br/>
@@ -41,7 +39,7 @@ If the iOS App compiled and launched correctly, it should run now and connect to
 
 ## Unity Editor Notes
 
-###Preparing an ARKit scene for ALPS
+### Preparing an ARKit scene for ALPS
 
 ![ALPS Manager Info](/ReadmeImages/ALPS_Manager_Info.png) <br/>
 To prepare an ARKit scene for ALPS, you just need to plop in the following prefabs from the prefabs folder into your scene:
@@ -119,11 +117,10 @@ Have fun! :)
 * https://www.juegostudio.com/blog/ios-game-development-via-unity-guide-for-beginners
 * https://docs.unity3d.com/Manual/iphone.html
 
-## This project was made possible with the support of
+## Special Thanks
+This project was made possible with the support of the following organizations:
 
- <br/>
-
-###Yodel Labs
+### Yodel Labs
 
 ![ALPS Logo](/ReadmeImages/alps-logo-dark.png) <br/>
 
@@ -132,7 +129,7 @@ Have fun! :)
 
  <br/>
 
-###Carnegie Mellon University Entertainment Technology Center
+### Carnegie Mellon University Entertainment Technology Center
 
 ![ETC Logo](/ReadmeImages/etc_logo.jpg) <br/>
 
@@ -140,7 +137,7 @@ Carnegie Mellon University's [**Entertainment Technology Center (ETC)**](https:/
 
  <br/>
 
-###Children's Museum of Pittsburgh MuseumLab
+### Children's Museum of Pittsburgh MuseumLab
 
 ![MuseumLab Logo](/ReadmeImages/museumlab_Logo.png) <br/>
 

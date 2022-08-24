@@ -23,10 +23,12 @@ This library has been configured to work at only **two** (2) locations where the
 6 Allegheny Square E Suite 101, Pittsburgh, PA 15212
 
 ![CMU ETC](/ReadmeImages/cmuetc.jpg) <br/>
-*Carnegie Mellon University's Entertainment Technology Center, main building.*
+![CMU ETC](/ReadmeImages/fp_with_beacons_ETC.png) <br/>
+*Carnegie Mellon University's Entertainment Technology Center, main building and 1st Floor plan map.*
 
 ![Museum Lab](/ReadmeImages/museumlab.jpg) <br/>
-*Children's Museum of Pittsburgh, MuseumLab building.*
+![CMU ETC](/ReadmeImages/fp_with_beacons_MuseumLab.png) <br/>
+*Children's Museum of Pittsburgh, MuseumLab building and 1st Floor plan map.*
 
 ### Running the ALPS app
 To use the app, simply run the iOS app. Note that an active internet connection is required to connect to the ALPS positioning system! When the app is active, the installed ALPS beacons should automatically turn on and begin beaconing location data. When the ALPS system is not in use, they should automatically turn on and go to standby mode after 100 seconds of no activity.
@@ -127,15 +129,11 @@ This project was made possible with the support of the following organizations:
 [**Yodel Labs**](https://www.yodellabs.com/
 ) is a Carnegie Mellon University spinout founded in 2017. Our mission is to provide the most accurate location services in the mobile device industry, enabling your mobile app to bridge the gap between the virtual and the physical world.
 
- <br/>
-
 ### Carnegie Mellon University Entertainment Technology Center
 
 ![ETC Logo](/ReadmeImages/etc_logo.jpg) <br/>
 
 Carnegie Mellon University's [**Entertainment Technology Center (ETC)**](https://www.etc.cmu.edu/) was founded in 1998 with Randy Pausch and Don Marinelli as the co-directors. The faculty and staff worked together to articulate our academic mission which focuses on educational goals and creative development. And we also created an R&D Agenda exploring transformational games, innovation by design and interactive storytelling. Throughout, we work to prepare students to graduate as creative professionals The ETC's unique, two-year, Master of Entertainment Technology (MET) degree was founded as a joint venture between Carnegie Mellon University’s School of Computer Science and the College of Fine Arts.  The MET is currently considered a terminal degree.
-
- <br/>
 
 ### Children's Museum of Pittsburgh MuseumLab
 

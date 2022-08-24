@@ -15,7 +15,7 @@ This has been tested to work on Unity 2020.3.38f1, and will likely work on later
 ## Locations
 This library has been configured to work at only **two** locations where the ALPS system has already been physically installed, calibrated and configured. These locations are as follows:
 
-### Carnegie Mellon University Entertainment Technology Center 
+### <u>Carnegie Mellon University Entertainment Technology Center</u>
 700 Technology Dr, Pittsburgh, PA 15219
 *(1st Floor, Randy Pausch Auditorium)*
 ![CMU ETC](/ReadmeImages/cmuetc.jpg) <br/>
@@ -41,7 +41,7 @@ This library has been configured to work at only **two** locations where the ALP
 | 13                | 23.716 | 4.062 | 24.401 | 
 | 14                | 34.273 | 3.84  | 26.725 | 
 
-### Children's Museum of Pittsburgh
+### <u>Children's Museum of Pittsburgh</u>
 6 Allegheny Square E Suite 101, Pittsburgh, PA 15212 
 *(1st Floor, MuseumLab TechLab)*
 ![Museum Lab](/ReadmeImages/museumlab.jpg) <br/>
@@ -72,11 +72,9 @@ If for whatever reason the ALPS beacons do not automatically turn on (noted by a
 If the iOS App compiled and launched correctly, it should run now and connect to the ALPS system and update the location of the iOS device. To fully localize and converge on an accurate position/rotation, you may need to slowly walk around with the iOS device, facing the iOS device towards the ground at a 45 degree angle for around 30-60 seconds or until the ALPS positioning system successfully triangulates the iOS device's position.
 
 ## Unity Editor Notes
-
-### Preparing an ARKit scene for ALPS
+To prepare an ARKit scene for ALPS, you just need to plop in the following prefabs from the prefabs folder into your scene:
 
 ![ALPS Manager Info](/ReadmeImages/ALPS_Manager_Info.png) <br/>
-To prepare an ARKit scene for ALPS, you just need to plop in the following prefabs from the prefabs folder into your scene:
 
 * **GlobalFrame (ETC)** OR **GlobalFrame (MuseumLab)** <br/>
 This is the global root node for ALPS, where everything should be parented under. This object must have a scale of `(-1,0,0)`. Note that you pick the GlobalFrame prefab based on which location you want to build your app for.
@@ -154,20 +152,20 @@ Have fun! :)
 ## Special Thanks
 This project was made possible with the support of the following organizations:
 
-### Yodel Labs
+### <u>Yodel Labs</u>
 
 ![ALPS Logo](/ReadmeImages/alps-logo-dark.png) <br/>
 
 [**Yodel Labs**](https://www.yodellabs.com/
 ) is a Carnegie Mellon University spinout founded in 2017. Our mission is to provide the most accurate location services in the mobile device industry, enabling your mobile app to bridge the gap between the virtual and the physical world.
 
-### Carnegie Mellon University Entertainment Technology Center
+### <u>Carnegie Mellon University Entertainment Technology Center</u>
 
 ![ETC Logo](/ReadmeImages/etc_logo.jpg) <br/>
 
 Carnegie Mellon University's [**Entertainment Technology Center (ETC)**](https://www.etc.cmu.edu/) was founded in 1998 with Randy Pausch and Don Marinelli as the co-directors. The faculty and staff worked together to articulate our academic mission which focuses on educational goals and creative development. And we also created an R&D Agenda exploring transformational games, innovation by design and interactive storytelling. Throughout, we work to prepare students to graduate as creative professionals The ETC's unique, two-year, Master of Entertainment Technology (MET) degree was founded as a joint venture between Carnegie Mellon University’s School of Computer Science and the College of Fine Arts.  The MET is currently considered a terminal degree.
 
-### Children's Museum of Pittsburgh MuseumLab
+### <u>Children's Museum of Pittsburgh MuseumLab</u>
 
 ![MuseumLab Logo](/ReadmeImages/museumlab_Logo.png) <br/>
 

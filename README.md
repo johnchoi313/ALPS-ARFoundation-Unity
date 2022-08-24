@@ -15,7 +15,7 @@ This has been tested to work on Unity 2020.3.38f1, and will likely work on later
 ## Locations
 This library has been configured to work at only **two** locations where the ALPS system has already been physically installed, calibrated and configured. These locations are as follows:
 
-### <u>Carnegie Mellon University Entertainment Technology Center</u>
+### <in>Carnegie Mellon University Entertainment Technology Center</in>
 700 Technology Dr, Pittsburgh, PA 15219
 *(1st Floor, Randy Pausch Auditorium)*
 ![CMU ETC](/ReadmeImages/cmuetc.jpg) <br/>

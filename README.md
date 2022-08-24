@@ -12,25 +12,57 @@ https://user-images.githubusercontent.com/6497727/186274526-404aadf5-463e-43ac-8
 This repository integrates the ALPS iOS Framework with Unity's ARFoundation by providing an easy-to-use C# wrapper. 
 This has been tested to work on Unity 2020.3.38f1, and will likely work on later versions as well. For more information about ARFoundation, please visit this link: https://github.com/Unity-Technologies/arfoundation-samples . ARFoundation has already been installed and configured in this repository, so you shouldn't need to change any settings for ARFoundation, unless you change the Unity version.
 
-## Usage Notes
+## Locations
+This library has been configured to work at only **two** locations where the ALPS system has already been physically installed, calibrated and configured. These locations are as follows:
 
-### Locations
-This library has been configured to work at only **two** (2) locations where the ALPS system has already been physically installed, calibrated and configured. These locations are as follows:
-
-* **Carnegie Mellon University Entertainment Technology Center** *(1st Floor, Randy Pausch Auditorium)* <br/>
+### Carnegie Mellon University Entertainment Technology Center 
 700 Technology Dr, Pittsburgh, PA 15219
-* **Children's Museum of Pittsburgh** *(1st Floor, MuseumLab TechLab)* <br/>
-6 Allegheny Square E Suite 101, Pittsburgh, PA 15212
-
+*(1st Floor, Randy Pausch Auditorium)*
 ![CMU ETC](/ReadmeImages/cmuetc.jpg) <br/>
+*Carnegie Mellon University's Entertainment Technology Center, main building.*
 ![CMU ETC](/ReadmeImages/fp_with_beacons_ETC.png) <br/>
-*Carnegie Mellon University's Entertainment Technology Center, main building and 1st Floor plan map.*
+1st Floor plan map, with beacon locations in meters.
 
+|                   |        |       |        | 
+|-------------------|--------|-------|--------| 
+| ETC Beacons       | x      | y     | z      | 
+| 1                 | 7.303  | 2.655 | 22.44  | 
+| 2                 | 11.577 | 2.668 | 22.336 | 
+| 3                 | 7.291  | 2.639 | 24.886 | 
+| 4                 | 11.545 | 2.65  | 24.889 | 
+| 5                 | 10.194 | 3.839 | 26.738 | 
+| 6                 | 22.588 | 3.866 | 26.737 | 
+| 7                 | 35.404 | 3.84  | 26.725 | 
+| 8                 | 16.125 | 4.59  | 28.335 | 
+| 9                 | 28.97  | 4.591 | 28.321 | 
+| 10                | 23.727 | 4.039 | 19.181 | 
+| 11                | 34.281 | 4.035 | 19.157 | 
+| 12                | 30.022 | 4.036 | 21.644 | 
+| 13                | 23.716 | 4.062 | 24.401 | 
+| 14                | 34.273 | 3.84  | 26.725 | 
+
+### Children's Museum of Pittsburgh
+6 Allegheny Square E Suite 101, Pittsburgh, PA 15212 
+*(1st Floor, MuseumLab TechLab)*
 ![Museum Lab](/ReadmeImages/museumlab.jpg) <br/>
+*Children's Museum of Pittsburgh, MuseumLab building.*
 ![CMU ETC](/ReadmeImages/fp_with_beacons_MuseumLab.png) <br/>
-*Children's Museum of Pittsburgh, MuseumLab building and 1st Floor plan map.*
+1st Floor plan map, with beacon locations in meters.
 
-### Running the ALPS app
+|                   |        |       |        | 
+|-------------------|--------|-------|--------| 
+| MuseumLab Beacons | x      | y     | z      | 
+| 1                 | 21.607 | 4.266 | 9.765  | 
+| 2                 | 33.305 | 4.291 | 9.781  | 
+| 3                 | 22.914 | 4.433 | 15.035 | 
+| 4                 | 30.137 | 3.838 | 16.485 | 
+| 5                 | 45.697 | 3.764 | 7.487  | 
+| 6                 | 45.777 | 3.764 | 19.432 | 
+
+
+
+
+## Running the ALPS app
 To use the app, simply run the iOS app. Note that an active internet connection is required to connect to the ALPS positioning system! When the app is active, the installed ALPS beacons should automatically turn on and begin beaconing location data. When the ALPS system is not in use, they should automatically turn on and go to standby mode after 100 seconds of no activity.
 
 ![Museum Lab](/ReadmeImages/ALPS_sysadmin.png) <br/>

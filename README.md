@@ -130,7 +130,7 @@ See below for more info:
 ![XCode Permissions](/ReadmeImages/XCode_Permissions.jpg) <br/>
 For XCode to compile correctly and have the Unity iOS app not immediately crash upon successful compilation and push, we need the following permissions enabled in `XCode -> Unity-iPhone -> Info`:  
 
-* `NSBluetoothPeriperhalUsageDescription `
+* `NSBluetoothPeripheralUsageDescription `
 * `NSBluetoothAlwaysUsageDescription`
 
 The following permissions should have already been added by Unity in the previous step, but if they have not been enabled, you will need to enable them in XCode: 

@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: CMU ETC
-  productName: ALPS Unity 2022
+  productName: ETC Pigeons!
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
@@ -358,7 +358,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 25e529b707129dc4f87bbeaa53a24d42, type: 3}
+      m_Icon: {fileID: 2800000, guid: 6ca3ffff8df3f644cbc71474d25c0573, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

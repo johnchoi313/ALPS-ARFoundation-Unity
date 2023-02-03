@@ -241,7 +241,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: ar.unity.test
     Standalone: com.unity.arfoundation.samples
-    iPhone: cmu.etc.alps2022
+    iPhone: cmu.etc.pigeons
   buildNumber:
     Standalone: 0
     iPhone: 0
